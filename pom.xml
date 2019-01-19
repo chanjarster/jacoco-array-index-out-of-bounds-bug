@@ -240,11 +240,6 @@
               <JDBC_URL>jdbc:mysql://localhost:${docker-mysql.portmapping}/${docker-mysql.database}</JDBC_URL>
               <JDBC_USERNAME>${docker-mysql.user}</JDBC_USERNAME>
               <JDBC_PASSWORD>${docker-mysql.password}</JDBC_PASSWORD>
-
-              <!--<JDBC_URL>jdbc:mysql://localhost:3306/testdb</JDBC_URL>-->
-              <!--<JDBC_USERNAME>test</JDBC_USERNAME>-->
-              <!--<JDBC_PASSWORD>1</JDBC_PASSWORD>-->
-
             </environmentVariables>
           </configuration>
         </plugin>
