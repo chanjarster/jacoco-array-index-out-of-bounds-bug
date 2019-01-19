@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: user
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  ${JDBC_URL:jdbc:mysql://172.50.10.15:3306/userTest}
+    username: ${JDBC_USERNAME:root}
+    password: ${JDBC_PASSWORD:111111}
+    hikari:
+      data-source-properties:
+        useSSL: false
+        characterEncoding: utf8
+        characterSetResults: utf8
+        allowPublicKeyRetrieval: true
+
+  jpa: 
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql:  ${JPA_SHOW_SQL:false}
+  jackson:
+    time-zone: ${JACKSON_TIME_ZONE:Asia/Shanghai}
+    date-format: yyyy-MM-dd HH:mm:ss
+  aop:
+    proxy-target-class: true
